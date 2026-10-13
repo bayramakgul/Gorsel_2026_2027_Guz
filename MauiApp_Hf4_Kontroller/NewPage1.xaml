@@ -3,28 +3,40 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiApp_Hf4_Kontroller.NewPage1"
              Title="NewPage1">
-    <VerticalStackLayout>
-        <Label 
+    <ScrollView>
+
+        <VerticalStackLayout>
+            <Label 
             Text="Welcome to .NET MAUI!"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
 
-        <Button Text="Start" 
+            <Button Text="Start" 
                 Background="Green" 
                 HorizontalOptions="Start"
                 WidthRequest="200"/>
-        <Button Text="Center"  
+            <Button Text="Center"  
                 BackgroundColor="Yellow" 
                 HorizontalOptions="Center"
                 WidthRequest="200"/>
-        <Button Text="End"  
+            <Button Text="End"  
                 Background="Blue" 
                 HorizontalOptions="End"
                 WidthRequest="200"/>
-        <Button Text="Fill"  
+            <Button Text="Fill"  
                 Background="Red"  
                 HorizontalOptions="Fill"
                 />
-        
-    </VerticalStackLayout>
+
+            <Image 
+            WidthRequest="150"
+            Aspect="Fill"
+            Source="https://cdn03.ciceksepeti.com/cicek/grat125-1/L/somon-lila-buket-kagidinda-saksi-lilyum-grat125-bbb65fc1-3bce-4404-a34b-33314db96af7.png"/>
+
+            <Entry MinimumWidthRequest="250" 
+               MaximumWidthRequest="400"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
 </ContentPage>

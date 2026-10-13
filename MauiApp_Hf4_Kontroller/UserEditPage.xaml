@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp_Hf4_Kontroller.UserEditPage"
+             Title="UserEditPage">
+    <ContentPage.Resources>
+        <Style TargetType="Label">
+            <Setter Property="VerticalOptions" Value="Center" />
+            <Setter Property="FontSize" Value="Medium" />
+        </Style>
+    </ContentPage.Resources>
+
+    <ScrollView>
+
+        <Grid ColumnDefinitions="Auto,*"
+          RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto"
+          Margin="20" ColumnSpacing="10" RowSpacing="5">
+
+            <Label Grid.Row="0" Grid.Column="0" Text="Adı Soyadı"  />
+            <Entry Grid.Row="0" Grid.Column="1" Placeholder="Adı Soyadı" Keyboard="Text"/>
+
+            <Label Grid.Row="1" Grid.Column="0" Text="Telefon" />
+            <Entry Grid.Row="1" Grid.Column="1" Placeholder="Telefon" Keyboard="Telephone"/>
+
+            <Label Grid.Row="2" Grid.Column="0" Text="Email" />
+            <Entry Grid.Row="2" Grid.Column="1" Placeholder="Email" Keyboard="Email"/>
+
+            <Label Grid.Row="3" Grid.Column="0" Text="Password" />
+            <Entry Grid.Row="3" Grid.Column="1" IsPassword="True"
+               Placeholder="Password" Keyboard="Password"/>
+
+            <Label Grid.Row="4" Grid.Column="0" Text="Doğum Tarihi" />
+            <DatePicker Grid.Row="4" Grid.Column="1"  />
+
+            <Label Grid.Row="5" Grid.Column="0" Text="Saat" />
+            <TimePicker Grid.Row="5" Grid.Column="1"  />
+
+            <Label Grid.Row="6" Grid.Column="0" Text="Tutar" />
+            <Entry Grid.Row="6" Grid.Column="1" Placeholder="Tutar" Keyboard="Numeric"/>
+
+            <Border Grid.Row="7" Grid.ColumnSpan="2">
+                <VerticalStackLayout>
+                    <Label  Text="Adres" />
+                    <Editor Placeholder="Adres" 
+                        Keyboard="Text" HeightRequest="100"
+                />
+                </VerticalStackLayout>
+            </Border>
+
+            <Button Grid.Row="8" Grid.Column="1"
+                Text="Kaydet"
+                Clicked="OnSaveButtonClicked"
+        />
+        </Grid>
+    </ScrollView>
+
+</ContentPage>

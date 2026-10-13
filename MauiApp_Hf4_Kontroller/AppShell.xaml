@@ -4,16 +4,23 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:MauiApp_Hf4_Kontroller"
-    Title="MauiApp_Hf4_Kontroller"
-    
-    FlyoutHeader="Sayfalar"
-    FlyoutFooter="Versiyon 1.0">
+    Title="MauiApp_Hf4_Kontroller">
+
+    <ShellContent
+        Title="Kullanıcı Ekleme"
+        ContentTemplate="{DataTemplate local:UserEditPage}"
+        Route="UserEditPage" />
+
+    <ShellContent
+        Title="Görevler"
+        ContentTemplate="{DataTemplate local:GridPage}"
+        Route="GridPage" />
 
     <ShellContent
         Title="New Page"
         ContentTemplate="{DataTemplate local:NewPage1}"
         Route="NewPage1" />
-    
+
     <ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate local:MainPage}"

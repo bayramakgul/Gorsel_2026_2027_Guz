@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp_Hf4_Kontroller.GridPage"
+             Title="Görevler">
+
+    <Grid RowDefinitions="Auto,*,Auto"
+          ColumnDefinitions="Auto,*"
+          Margin="10,20,10,20">
+
+        <Label Text="Görevler:" Grid.Row="0" Grid.Column="0" VerticalOptions="Center" />
+        <SearchBar Placeholder="Görev Ara..." Grid.Row="0" Grid.Column="1" />
+
+        <Frame Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
+                CornerRadius="10" Margin="20,10" BorderColor="Blue"
+                Background="LightSkyBlue" Padding="50" >
+            <Frame BackgroundColor="YellowGreen" Margin="0">
+                
+            <CollectionView />
+            </Frame>
+
+        </Frame>
+
+        <Grid ColumnDefinitions="*,*,*" Grid.Row="2" Grid.ColumnSpan="2"
+              ColumnSpacing="20">
+            <Button Grid.Column="0" Text="Yeni Görev"  />
+            <Button Grid.Column="1" Text="İptal" Background="Tomato" TextColor="WhiteSmoke" />
+            <Button Grid.Column="2" Text="Tamam" Background="Green" TextColor="White" />
+        </Grid>
+
+    </Grid>
+
+</ContentPage>
