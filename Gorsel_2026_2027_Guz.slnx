@@ -2,4 +2,7 @@
   <Project Path="MauiApp_Hf4_Kontroller/MauiApp_Hf4_Kontroller.csproj">
     <Deploy Solution="Debug|*" />
   </Project>
+  <Project Path="MauiApp_Hf5_Device/MauiApp_Hf5_Device.csproj" Id="499d66a0-970a-4386-8662-a961713e1575">
+    <Deploy Solution="Debug|*" />
+  </Project>
 </Solution>
