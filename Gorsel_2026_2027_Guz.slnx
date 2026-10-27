@@ -5,4 +5,5 @@
   <Project Path="MauiApp_Hf5_Device/MauiApp_Hf5_Device.csproj" Id="499d66a0-970a-4386-8662-a961713e1575">
     <Deploy Solution="Debug|*" />
   </Project>
+  <Project Path="MauiApp_Hf6_Stiller/MauiApp_Hf6_Stiller.csproj" Id="e0032bc9-923f-4f8d-a1f9-5295522e3cbd" />
 </Solution>
