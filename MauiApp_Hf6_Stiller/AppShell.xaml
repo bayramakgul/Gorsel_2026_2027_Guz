@@ -10,5 +10,16 @@
         Title="Home"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
+    
+    
+    <ShellContent
+        Title="Yeni Sayfa"
+        ContentTemplate="{DataTemplate local:NewPage1}"
+        Route="NewPage1" />
+
+    <ShellContent
+        Title="Kullanıcı Kayıt"
+        ContentTemplate="{DataTemplate local:NewPage2}"
+        Route="NewPage2" />
 
 </Shell>

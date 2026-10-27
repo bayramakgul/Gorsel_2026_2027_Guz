@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/dotnet/maui/global"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://schemas.microsoft.com/dotnet/maui/global/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:MauiApp_Hf6_Stiller"
+    mc:Ignorable="d">
+
+    <Style TargetType="Button" x:Key="BaseButtonStyle">
+        <Setter Property="TextColor" Value="Black" />
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="WidthRequest" Value="200"/>
+        <Setter Property="CornerRadius" Value="10"/>
+        <Setter Property="BorderWidth" Value="2"/>
+        <Setter Property="Margin" Value="20"/>
+    </Style>
+
+    <Style TargetType="Button" x:Key="OkButtonStyle" 
+               BasedOn="{StaticResource BaseButtonStyle}">
+
+        <Setter Property="BackgroundColor" Value="LightGreen" />
+        <Setter Property="BorderColor" Value="Green"/>
+        <Setter Property="Text" Value="👍Tamam" />
+    </Style>
+
+    <Style TargetType="Button" x:Key="CancelButtonStyle"
+               BasedOn="{StaticResource BaseButtonStyle}">
+
+        <Setter Property="BackgroundColor" Value="LightPink" />
+        <Setter Property="BorderColor" Value="Red"/>
+        <Setter Property="Text" Value="❌ İptal" />
+    </Style>
+
+
+</ResourceDictionary>

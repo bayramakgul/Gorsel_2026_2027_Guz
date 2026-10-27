@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp_Hf6_Stiller.NewPage2"
+             Title="NewPage2">
+    <ContentPage.Resources>
+        <Style TargetType="Label">
+            <Setter Property="VerticalTextAlignment" Value="Center" />
+        </Style>
+    </ContentPage.Resources>
+
+    <ScrollView>
+
+        <VerticalStackLayout Margin="20" Spacing="5">
+            <HorizontalStackLayout Spacing="5">
+                <Label Text="Tema Değiştir:" />
+                <Switch IsToggled="{Binding IsDarkTheme}" Toggled="Switch_Toggled" />
+                <Label Text="{Binding SystemTheme}" />
+            </HorizontalStackLayout>
+
+            <!-- KULLANICI KAYIT FORMU-->
+            <Label Text="Adı Soyadı" />
+            <Entry Placeholder="Adınızı ve Soyadınızı girin" />
+            <Label Text="E-posta" />
+            <Entry Placeholder="E-posta adresinizi girin" />
+            <Label Text="Telefon" />
+            <Entry Placeholder="Telefon numaranızı girin" Keyboard="Telephone" />
+            <Label Text="Şifre" />
+            <Entry Placeholder="Şifrenizi girin" />
+
+            <Button Text="Kayıt Ol" />
+            <Button Text="İptal" />
+
+            <Label Text="Kullanıcı Sözleşmesini kabul ediyorum" />
+            <Switch IsToggled="True" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
