@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="MauiApp_Hf7_Sayfalar.Pages.FavoriKisilerPage"
+    xmlns="http://schemas.microsoft.com/dotnet/maui/global"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://schemas.microsoft.com/dotnet/maui/global/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:MauiApp_Hf7_Sayfalar.Pages"
+    mc:Ignorable="d">
+    <CollectionView ItemsSource="{Binding Favoriler}">
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <SwipeView>
+                    <SwipeView.LeftItems>
+                        <SwipeItem  Text="📝" 
+                                    Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}},
+                                             Path=BindingContext.EditCommand}"
+                                    CommandParameter="{Binding .}"/>
+                        <SwipeItem  Text="❌" 
+                                    Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}},
+                                             Path=BindingContext.UnFavoriCommand}"
+                                    CommandParameter="{Binding .}"/>
+                    </SwipeView.LeftItems>
+                    <SwipeView.RightItems>
+                        <SwipeItem  Text="🗑️" 
+                                    Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}},
+                                             Path=BindingContext.DeleteCommand}"
+                                    CommandParameter="{Binding .}"/>
+                    </SwipeView.RightItems>
+                    <Border>
+                        <Grid RowDefinitions="Auto,Auto,Auto" RowSpacing="5"
+                      ColumnDefinitions="Auto,*" ColumnSpacing="5">
+                            <Image Source="{Binding UserImage}"
+                           WidthRequest="50" Grid.RowSpan="3" />
+
+                            <Label Text="{Binding FullName}" Grid.Column="1" />
+                            <Label Text="{Binding Phone}"    Grid.Column="1" Grid.Row="1"/>
+                            <Label Text="{Binding Email}"    Grid.Column="1" Grid.Row="2"/>
+                        </Grid>
+                    </Border>
+                </SwipeView>
+
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+
+</ContentPage>

@@ -6,4 +6,7 @@
     <Deploy Solution="Debug|*" />
   </Project>
   <Project Path="MauiApp_Hf6_Stiller/MauiApp_Hf6_Stiller.csproj" Id="e0032bc9-923f-4f8d-a1f9-5295522e3cbd" />
+  <Project Path="MauiApp_Hf7_Sayfalar/MauiApp_Hf7_Sayfalar.csproj" Id="622276ee-76ad-4328-aceb-051a20942f4f">
+    <Deploy Solution="Debug|*" />
+  </Project>
 </Solution>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MauiApp_Hf7_Sayfalar.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MauiApp_Hf7_Sayfalar"
+    xmlns:pg="clr-namespace:MauiApp_Hf7_Sayfalar.Pages"
+    Title="MauiApp_Hf7_Sayfalar"
+    FlyoutBehavior="Flyout">
+
+
+
+    <FlyoutItem Title="Rehberim" Icon="contact.png">
+        <Tab Title="📱 Rehber">
+            <ShellContent ContentTemplate="{DataTemplate pg:TelefonRehberi}" />
+        </Tab>
+        <Tab Title="⭐ Favori">
+            <ShellContent ContentTemplate="{DataTemplate pg:FavoriKisilerPage}" />
+        </Tab>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Görevler" Icon="task.png">
+        <ShellContent ContentTemplate="{DataTemplate pg:Gorevler}" />
+    </FlyoutItem>
+
+
+</Shell>
